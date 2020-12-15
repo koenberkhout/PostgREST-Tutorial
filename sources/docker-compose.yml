@@ -1,0 +1,22 @@
+# docker-compose.yml
+
+version: '3'
+services:
+  server:
+    image: postgrest/postgrest
+    ports:
+      - "3000:3000"
+    environment:
+      PGRST_DB_URI: postgres://authenticator:Fontys123@dev-postgres.cperpcjgj3fr.eu-west-1.rds.amazonaws.com:5432/presidents
+      PGRST_DB_SCHEMA: api
+      PGRST_DB_ANON_ROLE: readonly
+      PGRST_SERVER_PROXY_URI: "http://localhost:3000"
+      PGRST_JWT_SECRET: "mfn4iDz7ttt7pdLCChs1mLskfPZOZ4vX"
+  swagger:
+    image: swaggerapi/swagger-ui
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    environment:
+      API_URL: http://localhost:3000/

@@ -1,0 +1,21 @@
+body {
+    color: #2f2d33;
+}
+
+blockquote {
+    padding: 0 1rem;
+    margin-left: 0;
+    border-left: 0.3rem solid #dce6f0;
+}
+
+@media (min-width: 50rem) {
+    .site-header {
+        border-bottom: 0px solid #eeebee;
+        height: 70px;
+        max-height: 70px;
+    }
+}
+
+.side-bar .site-footer {
+    display: none !important;
+}

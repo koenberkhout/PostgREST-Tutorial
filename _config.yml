@@ -1,0 +1,6 @@
+remote_theme: pmarsceill/just-the-docs
+logo: "https://sebivenlo.github.io/PostgREST-Workshop/images/logo-nobg.png"
+# aux_links:
+#     "@koenberkhout":
+#       - "https://github.com/koenberkhout"
+# aux_links_new_tab: true
